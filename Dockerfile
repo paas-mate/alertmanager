@@ -5,7 +5,7 @@ WORKDIR /opt
 ARG version=0.24.0
 ARG TARGETARCH
 
-RUN wget https://github.com/alertmanager/alertmanager/releases/download/v$version/alertmanager-$version.linux-$TARGETARCH.tar.gz  && \
+RUN wget https://github.com/prometheus/alertmanager/releases/download/v$version/alertmanager-$version.linux-$TARGETARCH.tar.gz  && \
 mkdir -p alertmanager && \
 tar -xf alertmanager-$version.linux-$TARGETARCH.tar.gz -C alertmanager --strip-components 1 && \
 rm -rf alertmanager-$version.linux-$TARGETARCH.tar.gz
